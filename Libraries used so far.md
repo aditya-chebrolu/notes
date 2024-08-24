@@ -1,3 +1,3 @@
 # Libraries used so far...
 
-[rehype-pretty-code](https://rehype-pretty.pages.dev)
+1. [rehype-pretty-code](https://rehype-pretty.pages.dev)
