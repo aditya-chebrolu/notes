@@ -10,7 +10,7 @@
 
    3.2 [Implementing the Runnable interface](#32-implementing-the-runnable-interface)
 
-5. [Thread Methods](#4-thread-methods)
+4. [Thread Methods](#4-thread-methods)
    - [start()](#start)
    - [run()](#run)
    - [sleep(long millis)](#sleeplong-millis)
@@ -21,21 +21,14 @@
    - [setPriority(int priority) / getPriority()](#setpriorityint-priority--getpriority)
    - [isAlive()](#isalive)
 
-6. [Thread States](#5-thread-states)
-   - [NEW](#new)
-   - [RUNNABLE](#runnable)
-   - [BLOCKED](#blocked)
-   - [WAITING](#waiting)
-   - [TIMED_WAITING](#timed_waiting)
-   - [TERMINATED](#terminated)
+5. [Thread States](#5-thread-states)
 
-7. [Theory](#6-theory)
-   6.1 [run() vs start()](#61-run-vs-start)
-   6.2 [Threads and Concurrency](#62-threads-and-concurrency)
+6. [Theory](#6-theory)
+   [Threads and Concurrency](#threads-and-concurrency)
 
-8. [Pitfalls and Edge Cases](#7-pitfalls-and-edge-cases)
+7. [Pitfalls and Edge Cases](#7-pitfalls-and-edge-cases)
 
-9. [Best Practices](#8-best-practices)
+8. [Best Practices](#8-best-practices)
 
 ## 1. Overview
 
@@ -205,16 +198,18 @@ System.out.println(thread.isAlive()); // Outputs: true
 
 ## 6. Theory
 
-### 6.1 run() vs start()
+### Threads and Concurrency
 
-- `start()` creates a new thread and calls the `run()` method in that new thread.
-- Calling `run()` directly just executes the method in the current thread, without creating a new thread.
+_1. Concurrency: The ability to handle multiple tasks by switching between them_
 
-### 6.2 Threads and Concurrency
+_2. Parallelism: The ability to execute multiple tasks simultaneously_
 
-- Concurrency is about structure: dealing with multiple tasks at once.
-- Parallelism is about execution: actually doing multiple tasks at once.
-- Threads provide concurrency on single-core systems and can provide both concurrency and parallelism on multi-core systems.
+- Primary purpose of threads is to provide concurrency
+- Multiple threads can exist within a process, sharing resources
+- The system rapidly switches between threads, giving the illusion of simultaneous execution
+- Threads can achieve true parallelism on multi-core processors
+- Different threads can run on different CPU cores simultaneously
+- The JVM and operating system manage the distribution of threads across available cores
 
 ## 7. Pitfalls and Edge Cases
 
