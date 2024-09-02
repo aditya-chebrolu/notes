@@ -1,18 +1,12 @@
 # Runnable vs Callable in Java
 
 ## Index
-1. [Overview](#1-overview)
-2. [Key Characteristics](#2-key-characteristics)
-   1. [Runnable](#21-runnable)
-   2. [Callable](#22-callable)
-3. [Core Methods](#3-core-methods)
-   1. [Runnable](#31-runnable)
-   2. [Callable](#32-callable)
-4. [Usage](#4-usage)
-   1. [Runnable](#41-runnable)
-   2. [Callable](#42-callable)
-5. [Edge Cases and Considerations](#5-edge-cases-and-considerations)
-6. [Best Practices](#6-best-practices)
+1. [Overview](#overview)
+2. [Key Characteristics](#key-characteristics)
+3. [Core Methods](#core-methods)
+4. [Usage](#usage)
+5. [Edge Cases and Considerations](#edge-cases-and-considerations)
+6. [Best Practices](#best-practices)
 
 
 ## Overview
