@@ -15,7 +15,7 @@
 
 ## **Generator Expressions**
 
-### **Basics** <a id="basics-generator-expressions"></a>
+### **Basics**
 ```python
 (expression for item in iterable if condition)
 ```
@@ -28,7 +28,7 @@ print(next(squares))  # 1
 
 ---
 
-### **Difference from List Comprehensions** <a id="difference-from-list-comprehension"></a>
+### **Difference from List Comprehensions** 
 - **Memory-efficient**: Generators use lazy evaluation.
 ```python
 nums_gen = (x for x in range(10**6))  # Efficient
@@ -37,7 +37,7 @@ nums_list = [x for x in range(10**6)]  # High memory usage
 
 ---
 
-### **Using Generators with Functions** <a id="using-generators-with-functions"></a>
+### **Using Generators with Functions**
 Example:
 ```python
 nums = (x for x in range(5))
@@ -46,7 +46,7 @@ print(sum(nums))  # 10
 
 ---
 
-### **Chaining Generators** <a id="chaining-generators"></a>
+### **Chaining Generators**
 ```python
 gen2 = (y + 1 for y in gen1)
 ```
@@ -59,7 +59,7 @@ print(list(gen2))  # [1, 2, 5, 10, 17]
 
 ---
 
-### **Infinite Generators** <a id="infinite-generators"></a>
+### **Infinite Generators**
 Example with `itertools`:
 ```python
 from itertools import count
@@ -69,10 +69,6 @@ print(next(infinite_gen))  # 1
 
 ---
 
-### **Performance Tips** <a id="performance-tip-generator-expressions"></a>
+### **Performance Tips** 
 - Use for **streaming large datasets** or infinite sequences.
 - Generators avoid **memory overflow** issues.
-
---- 
-
-These two separate cheatsheets are now optimized for quick reference and better organization. Let me know if you need further refinements!
