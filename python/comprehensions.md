@@ -22,7 +22,7 @@
 
 ## **List Comprehensions**
 
-### **Basics** <a id="basics-list-comprehensions"></a>
+### **Basics**
 ```python
 [expression for item in iterable]
 ```
@@ -35,7 +35,7 @@ print(squares)  # [1, 4, 9]
 
 ---
 
-### **Adding a Condition** <a id="adding-a-condition-list-comprehensions"></a>
+### **Adding a Condition**
 ```python
 [expression for item in iterable if condition]
 ```
@@ -48,7 +48,7 @@ print(evens)  # [2, 4]
 
 ---
 
-### **Nested Loops** <a id="nested-loops-list-comprehensions"></a>
+### **Nested Loops**
 ```python
 [expression for item1 in iterable1 for item2 in iterable2]
 ```
@@ -60,7 +60,7 @@ print(pairs)  # [(0, 0), (0, 1), (1, 0), (1, 1)]
 
 ---
 
-### **List Comprehension with Function Calls** <a id="list-comprehension-with-function-calls"></a>
+### **List Comprehension with Function Calls**
 ```python
 result = [func(x) for x in iterable]
 ```
@@ -76,7 +76,7 @@ print(result)  # [1, 4, 9]
 
 ---
 
-### **Flattening a Nested List** <a id="flattening-a-nested-list"></a>
+### **Flattening a Nested List**
 ```python
 flat = [x for sublist in nested for x in sublist]
 ```
@@ -89,7 +89,7 @@ print(flat)  # [1, 2, 3, 4]
 
 ---
 
-### **Performance** <a id="performance-list-comprehensions"></a>
+### **Performance**
 - **Faster than loops** due to optimized C implementation.
 - Use for large computations requiring fast execution.
 
@@ -97,7 +97,7 @@ print(flat)  # [1, 2, 3, 4]
 
 ## **Dictionary Comprehensions**
 
-### **Basics** <a id="basics-dictionary-comprehensions"></a>
+### **Basics**
 ```python
 {key: value for item in iterable}
 ```
@@ -110,7 +110,7 @@ print(squares)  # {1: 1, 2: 4, 3: 9}
 
 ---
 
-### **Adding a Condition** <a id="adding-a-condition-dictionary-comprehensions"></a>
+### **Adding a Condition**
 ```python
 {key: value for item in iterable if condition}
 ```
@@ -123,7 +123,7 @@ print(evens)  # {2: 4, 4: 16}
 
 ---
 
-### **Reversing a Dictionary** <a id="reversing-a-dictionary"></a>
+### **Reversing a Dictionary**
 ```python
 reversed_dict = {v: k for k, v in original.items()}
 ```
@@ -136,7 +136,7 @@ print(reversed_dict)  # {1: 'a', 2: 'b'}
 
 ---
 
-### **Combining Two Lists into a Dictionary** <a id="combining-two-lists-into-a-dictionary"></a>
+### **Combining Two Lists into a Dictionary**
 ```python
 {k: v for k, v in zip(keys, values)}
 ```
@@ -150,7 +150,7 @@ print(combined)  # {'name': 'Alice', 'age': 25}
 
 ---
 
-### **Nested Dictionary Comprehension** <a id="nested-dictionary-comprehension"></a>
+### **Nested Dictionary Comprehension**
 ```python
 {x: {y: y**2 for y in range(n)} for x in range(m)}
 ```
@@ -164,7 +164,7 @@ print(nested_dict)  # {0: {0: 0, 1: 1}, 1: {0: 0, 1: 1}}
 
 ## **Set Comprehensions**
 
-### **Basics** <a id="set-comprehensions"></a>
+### **Basics**
 ```python
 {x**2 for x in nums}
 ```
