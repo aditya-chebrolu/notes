@@ -26,7 +26,7 @@
 
 ---
 
-## Zipping and Unzipping**
+## Zipping and Unzipping
 - **Zipping**:
   ```python
   names = ['Alice', 'Bob']
@@ -43,7 +43,7 @@
 
 ---
 
-## **3. Iterators as Function Arguments**
+## Iterators as Function Arguments
 - **Using Multiple Iterables**:
   ```python
   nums1 = [1, 2]
@@ -54,7 +54,7 @@
 
 ---
 
-## **4. Comprehensions and Generators**
+## Comprehensions and Generators
 - **Generator Expression**:
   ```python
   squares = (x**2 for x in range(5))
@@ -69,7 +69,7 @@
 
 ---
 
-## **5. Useful Iterator Functions**
+## Useful Iterator Functions
 - **`map(func, *iterables)`**:
   ```python
   nums = [1, 2, 3]
@@ -99,7 +99,7 @@
 
 ---
 
-## **6. Custom Iterators**
+## Custom Iterators
 - **Creating Custom Iterator**:
   ```python
   class Counter:
@@ -122,13 +122,13 @@
 
 ---
 
-## **7. Iterator Protocol**
+## Iterator Protocol
 - **`__iter__`**: Returns the iterator object itself.
 - **`__next__`**: Returns the next item; raises `StopIteration` when done.
 
 ---
 
-## **8. Advanced Iterator Functions**
+## Advanced Iterator Functions
 - **`enumerate(iterable, start=0)`**:
   ```python
   items = ['a', 'b']
@@ -154,13 +154,13 @@
 
 ---
 
-## **9. Iterator Performance Tips**
+## Iterator Performance Tips
 - Use **`itertools`** for memory efficiency.
 - Use **generator expressions** for large data when storage isn't needed.
 
 ---
 
-## **10. Debugging Iterators**
+## Debugging Iterators
 - **Inspect Without Consuming**:
   ```python
   from itertools import tee
