@@ -14,7 +14,7 @@
 
 ---
 
-## **1. Basics of Iterators**
+## 1. Basics of Iterators
 - **Definition**: An iterator is an object implementing `__iter__()` and `__next__()` methods.
 - **Creating an Iterator**:
   ```python
