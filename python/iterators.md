@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Basics of Iterators
+## Basics of Iterators
 - **Definition**: An iterator is an object implementing `__iter__()` and `__next__()` methods.
 - **Creating an Iterator**:
   ```python
@@ -26,7 +26,7 @@
 
 ---
 
-## **2. Zipping and Unzipping**
+## Zipping and Unzipping**
 - **Zipping**:
   ```python
   names = ['Alice', 'Bob']
