@@ -22,7 +22,7 @@ Here’s the enhanced **Python Lists: Quick Lookup Cheat Sheet** with an **index
 
 ---
 
-## **1. Creating a List**
+## 1. Creating a List
 ```python
 # Empty List
 my_list = []
