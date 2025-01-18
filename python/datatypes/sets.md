@@ -32,7 +32,7 @@
 ## Set Operations
 | **Operation**                  | **Code Example**                   | **Description**                                     |
 |--------------------------------|-------------------------------------|---------------------------------------------------|
-| Union                          | `s1 | s2` or `s1.union(s2)`        | Returns a set with elements from both sets.       |
+| Union                          | `s1 \| s2` or `s1.union(s2)`        | Returns a set with elements from both sets.       |
 | Intersection                   | `s1 & s2` or `s1.intersection(s2)` | Returns a set with elements common to both sets.  |
 | Difference                     | `s1 - s2` or `s1.difference(s2)`   | Returns a set with elements in `s1` but not `s2`. |
 | Symmetric difference           | `s1 ^ s2` or `s1.symmetric_difference(s2)` | Returns a set with elements in either set, but not both. |
