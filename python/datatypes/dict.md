@@ -1,7 +1,3 @@
-Here's an enhanced and well-structured version of the Python Dictionaries Cheatsheet with improved organization by topics for better clarity and usability:
-
----
-
 # Python Dictionaries Cheatsheet
 
 ## Basics
@@ -51,7 +47,7 @@ Here's an enhanced and well-structured version of the Python Dictionaries Cheats
 ## Advanced Operations
 | **Operation**                  | **Code Example**                   | **Description**                                     |
 |--------------------------------|-------------------------------------|---------------------------------------------------|
-| Merge dictionaries (Python ≥3.9)| `d1 \| d2`                         | Merges `d1` and `d2` into a new dictionary.       |
+| Merge dictionaries (Python ≥3.9)| `d1 \| d2` or `{**d1, **d2}`                        | Merges `d1` and `d2` into a new dictionary.       |
 | Merge in-place (Python ≥3.9)   | `d1 \|= d2`                         | Updates `d1` with `d2`.                           |
 | Default dictionary for missing keys | `from collections import defaultdict; d = defaultdict(default_factory)` | Provides default values for missing keys.        |
 | Count items                    | `from collections import Counter; Counter(iterable)` | Counts occurrences of elements.                 |
@@ -74,4 +70,3 @@ Here's an enhanced and well-structured version of the Python Dictionaries Cheats
 - **Set default if key doesn’t exist**: `d.setdefault("key", default_value)` adds the key with `default_value` if it doesn’t exist.
 - **Combine keys and values from two lists**: `dict(zip(keys, values))` creates a dictionary.
 
-This comprehensive, categorized cheatsheet is designed for quick lookups and practical use cases.
