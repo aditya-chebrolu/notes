@@ -26,6 +26,7 @@
 | Count occurrences              | `lst.count("value")`               | Counts the occurrences of the value.              |
 | Reverse the list               | `lst.reverse()`                    | Reverses the list in place.                       |
 | Sort the list                  | `lst.sort()`                       | Sorts the list in ascending order.                |
+| Sort the list by key           | `lst.sort(key=len)`                | Sorts the list in ascending order.                |
 | Sort in descending order       | `lst.sort(reverse=True)`           | Sorts the list in descending order.               |
 | Copy the list                  | `lst.copy()`                       | Returns a shallow copy of the list.               |
 
