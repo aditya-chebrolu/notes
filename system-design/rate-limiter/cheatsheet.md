@@ -15,6 +15,7 @@
 - Service-level only if very specific
 
 ## 3️⃣ Choose Algorithm
+[YT Video Reference](https://www.youtube.com/watch?v=mQCJJqUfn9Y)
 - ✅ Token Bucket (default choice) – supports bursts + steady rate
 - Leaky Bucket – smooth output
 - Fixed Window – simple but bursty at edges
