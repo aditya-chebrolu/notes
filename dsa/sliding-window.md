@@ -44,22 +44,22 @@ shrink in a loop.
 
 ## Problems
 
--   76. Minimum Window Substring\
+- Minimum Window Substring\
         https://leetcode.com/problems/minimum-window-substring/
 
--   424. Longest Repeating Character Replacement\
+- Longest Repeating Character Replacement\
          https://leetcode.com/problems/longest-repeating-character-replacement/
 
--   340. Longest Substring with At Most K Distinct Characters\
+- Longest Substring with At Most K Distinct Characters\
          https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
 
--   209. Minimum Size Subarray Sum\
+- Minimum Size Subarray Sum\
          https://leetcode.com/problems/minimum-size-subarray-sum/
 
--   1004. Max Consecutive Ones III\
+- Max Consecutive Ones III\
           https://leetcode.com/problems/max-consecutive-ones-iii/
 
--   992. Subarrays with K Different Integers\
+- Subarrays with K Different Integers\
          https://leetcode.com/problems/subarrays-with-k-different-integers/
 
 **Exactly K Trick:**\
