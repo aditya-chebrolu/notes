@@ -82,13 +82,13 @@ Violation caused by one known index. Jump directly to safe spot.
 
 ## Problems
 
--   3.  Longest Substring Without Repeating Characters\
+- Longest Substring Without Repeating Characters\
         https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
--   1695. Maximum Erasure Value\
+- Maximum Erasure Value\
           https://leetcode.com/problems/maximum-erasure-value/
 
--   904. Fruit Into Baskets\
+- Fruit Into Baskets\
          https://leetcode.com/problems/fruit-into-baskets/
 
 ------------------------------------------------------------------------
@@ -106,19 +106,19 @@ Window size drives movement. Not validity.
 
 ## Problems
 
--   643. Maximum Average Subarray I\
+- Maximum Average Subarray I\
          https://leetcode.com/problems/maximum-average-subarray-i/
 
--   1456. Maximum Number of Vowels in a Substring of Given Length\
+- Maximum Number of Vowels in a Substring of Given Length\
           https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 
--   438. Find All Anagrams in a String\
+- Find All Anagrams in a String\
          https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
--   567. Permutation in String\
+- Permutation in String\
          https://leetcode.com/problems/permutation-in-string/
 
--   239. Sliding Window Maximum\
+- Sliding Window Maximum\
          https://leetcode.com/problems/sliding-window-maximum/
 
 ------------------------------------------------------------------------
