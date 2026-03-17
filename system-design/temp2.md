@@ -1,4 +1,3 @@
-````md
 Perfect. You want a **system-design mind map**, not just a linear explanation.
 
 That is the right way to learn it.
