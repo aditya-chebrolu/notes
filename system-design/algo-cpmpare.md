@@ -59,4 +59,15 @@
 | **Custom alias**       | User enters `"myblog"`             | Branding              | User-defined               |
 | **Obfuscated ID**      | `ID 125 → encrypt → "XyZ91"`       | Hide sequence         | Encode + scramble          |
 
+| Method                 | Example flow             | Use when              | Pros                    | Cons                       |
+| ---------------------- | ------------------------ | --------------------- | ----------------------- | -------------------------- |
+| **Auto-ID + Base62**   | `125 → "cb"`             | Simple system         | Easy, no collisions     | Predictable, DB bottleneck |
+| **Snowflake + Base62** | `839274982734 → "Kx9Ab"` | Distributed scale     | Scalable, no central DB | Complex, time sync issues  |
+| **Random string**      | `"aZ91xQ"`               | Need unguessable URLs | Secure, simple          | Collisions, retries        |
+| **Random + retry**     | `"abc123" ❌ → "xYz789"`  | Real-world random     | Decentralized, flexible | Retry overhead             |
+| **Hash (truncated)**   | `hash(url) → "a94xK2"`   | Same URL → same code  | Deterministic           | Collisions, inflexible     |
+| **Hash + salt**        | `hash(url+1) → new`      | Handle collisions     | Safer hashing           | More complexity            |
+| **Pre-generated pool** | Pick `"Qw91Er"`          | Low latency writes    | Fast allocation         | Pool management            |
+| **Custom alias**       | `/myblog`                | Branding use-case     | User-friendly           | Conflicts, abuse risk      |
+| **Obfuscated ID**      | `125 → "XyZ91"`          | Hide sequence         | Safer than auto-ID      | Reversible complexity      |
 
