@@ -46,3 +46,17 @@
 | Security-focused public URLs | Random Base62                                                                    |
 | Advanced product design      | Mix of **random/custom alias** externally and **internal ID mapping** internally |
 
+
+| Method                 | Example flow                       | When to think of it   | Key idea                   |
+| ---------------------- | ---------------------------------- | --------------------- | -------------------------- |
+| **Auto-ID + Base62**   | `ID: 125 → Base62 → "cb"`          | Basic system          | Sequential → encode        |
+| **Snowflake + Base62** | `ID: 839274982734 → "Kx9Ab"`       | Distributed system    | Unique IDs across machines |
+| **Random string**      | Generate `"aZ91xQ"` directly       | Need security         | Pure random                |
+| **Random + retry**     | `"abc123"` exists → try `"xYz789"` | Real-world random     | Retry on collision         |
+| **Hash (truncated)**   | `hash(url) → "a94xK2"`             | Same URL → same code  | Deterministic              |
+| **Hash + salt**        | `hash(url+1) → new code`           | Handle hash collision | Adjust input               |
+| **Pre-generated pool** | Pick `"Qw91Er"` from pool          | High traffic writes   | Pre-create keys            |
+| **Custom alias**       | User enters `"myblog"`             | Branding              | User-defined               |
+| **Obfuscated ID**      | `ID 125 → encrypt → "XyZ91"`       | Hide sequence         | Encode + scramble          |
+
+
