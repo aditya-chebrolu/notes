@@ -12,3 +12,37 @@
 | **Custom alias (user-provided)**                               | User chooses code if available                                              | Premium/custom short links, branded use cases                           | Human-friendly, memorable, marketing-friendly                                         | Need profanity/reserved-word checks, conflicts, abuse/spam risk                                               | `/openai`, `/sale2026`                 |
 | **Keyword / semantic code generation**                         | Generate readable code from title/words, maybe with suffix                  | Marketing or user-facing branded links                                  | More memorable than random codes                                                      | High collision probability, privacy leakage, not great for scale alone                                        | `/summer-sale-7`                       |
 | **Encrypted / obfuscated ID**                                  | Take sequential ID, encrypt or permute before encoding                      | When you want sequence simplicity without obvious predictability        | Hides raw order/volume better than plain Base62 ID                                    | Reversible scheme complexity, key management, not fully “random”                                              | `ID -> obfuscate -> Base62`            |
+
+
+
+
+| Situation                                                          | Best choice                            |
+| ------------------------------------------------------------------ | -------------------------------------- |
+| **Interview default / easiest to explain**                         | **Auto-increment ID + Base62**         |
+| **Huge distributed scale**                                         | **Snowflake-style ID + Base62**        |
+| **Need unguessable public links**                                  | **Random string + retry on collision** |
+| **Want same URL to usually get same short code**                   | **Hash + collision resolution**        |
+| **Need ultra-fast writes with prepared inventory**                 | **Pre-generated key pool**             |
+| **Need user-friendly branded links**                               | **Custom alias**                       |
+| **Want simple system but less predictability than sequential IDs** | **Obfuscated/encrypted ID**            |
+
+
+| Method                   | Use when              | Pros                    | Cons                       |
+| ------------------------ | --------------------- | ----------------------- | -------------------------- |
+| **Auto-ID + Base62**     | Simple system         | Easy, no collisions     | Predictable, DB bottleneck |
+| **Snowflake + Base62**   | Distributed scale     | Scalable, no central DB | Complex, time sync issues  |
+| **Random string**        | Need unguessable URLs | Secure, simple          | Collisions, retries        |
+| **Hash (truncated)**     | Same URL → same code  | Deterministic           | Collisions, inflexible     |
+| **Hash + collision fix** | Dedup + safer         | More robust hashing     | Added complexity           |
+| **Pre-generated pool**   | Low latency writes    | Fast allocation         | Pool management            |
+| **Custom alias**         | Branding use-case     | User-friendly           | Conflicts, abuse risk      |
+| **Obfuscated ID**        | Hide sequence         | Safer than auto-ID      | Reversible complexity      |
+
+
+| Scale / design maturity      | Common answer                                                                    |
+| ---------------------------- | -------------------------------------------------------------------------------- |
+| Basic URL shortener          | Auto-increment ID + Base62                                                       |
+| Mid/large scale              | Snowflake ID + Base62                                                            |
+| Security-focused public URLs | Random Base62                                                                    |
+| Advanced product design      | Mix of **random/custom alias** externally and **internal ID mapping** internally |
+
