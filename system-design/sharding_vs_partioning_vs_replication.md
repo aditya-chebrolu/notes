@@ -12,3 +12,35 @@
 | **Typical Use Case**   | Backup, read scaling                        | Large tables, indexing                                        | Massive distributed systems                                  |
 
 
+```
+
+                     ┌──────────────────────┐
+                     │     App / Client     │
+                     └─────────┬────────────┘
+                               │
+                     ┌─────────▼──────────┐
+                     │   Router / Proxy   │
+                     └─────────┬──────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+   ┌────▼────┐           ┌────▼────┐           ┌────▼────┐
+   │ Shard 1 │           │ Shard 2 │           │ Shard 3 │   ← SHARDING
+   └────┬────┘           └────┬────┘           └────┬────┘
+        │                      │                      │
+  ┌─────▼─────┐        ┌──────▼─────┐        ┌──────▼─────┐
+  │ Primary   │        │ Primary    │        │ Primary    │
+  │ (writes)  │        │ (writes)   │        │ (writes)   │
+  └─────┬─────┘        └──────┬─────┘        └──────┬─────┘
+        │                      │                      │
+  ┌─────▼─────┐        ┌──────▼─────┐        ┌──────▼─────┐
+  │ Replica   │        │ Replica    │        │ Replica    │
+  │ (reads)   │        │ (reads)    │        │ (reads)    │  ← REPLICATION
+  └───────────┘        └────────────┘        └────────────┘
+
+   Inside each shard:
+   ┌──────────────────────────────┐
+   │ Orders Table Partitioned By: │
+   │  Jan | Feb | Mar | Apr       │  ← PARTITIONING
+   └──────────────────────────────┘
+```
